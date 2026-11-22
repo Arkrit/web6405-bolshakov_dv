@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CastHub - регистрация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CastHub</h1>
+        <p>Заявка в академию магии</p>
+    </header>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="spells.html">Заклинания</a>
+        <a href="schools.html">Школы магии</a>
+        <a href="form.html">Регистрация</a>
+    </nav>
+    <main>
+        <div class="form-card">
+            <h2>Регистрация в академии магии</h2>
+            <p>Заполни форму, чтобы создать объект заявки (данные выведутся в консоль).</p>
+
+            <form id="application-form" method="post" action="#">
+                <div class="form-field">
+                    <label for="name">Имя мага</label>
+                    <input type="text" id="name" name="name" placeholder="Например, Мерлин" required minlength="2">
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Электронная почта</label>
+                    <input type="email" id="email" name="email" placeholder="mage@casthub.ru" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" placeholder="Не менее 6 символов" required minlength="6">
+                </div>
+
+                <div class="form-field form-field--checkbox">
+                    <label>
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        Я согласен(на) на обработку персональных данных
+                    </label>
+                </div>
+
+                <button class="button" type="submit">Отправить заявку на сервер</button>
+                <div class="form-status" id="form-status" role="status"></div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>CastHub - лабораторная работа № 4</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
